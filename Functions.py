@@ -6,7 +6,7 @@ class Functions:
 
     # define a basic function
     def func1(self):
-        print("I am a function.")
+        print("I am a function. I return a string that prints onto the screen")
 
     # function that takes arguments
     def func2(arg1, arg2):
