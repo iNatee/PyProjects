@@ -1,6 +1,6 @@
 class UserInput:
 
-    def doMinusOrPlus(userOp, userNum, userNum2):
+    def doSum(userOp, userNum, userNum2):
 
         if userOp == "+":
             return str(str(userNum) + " + " + str(userNum2) + " = " + str(userNum + userNum2))
