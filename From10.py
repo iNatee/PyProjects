@@ -1,24 +1,36 @@
 class UserInput:
 
-    def operateTo10(userOp, userNum):
+    def operateWith(userOp, userNum, userNum2):
 
         if userOp == "+":
-            return 10 + userNum
+            return str(str(userNum) + " + " + str(userNum2) + " = " + str(userNum + userNum2))
 
         elif userOp == "-":
 
-            if userNum < 10:
-                return 10 - userNum
+            print("Would you like to do?" + "\n" + "1. " + str(str(userNum) + str(userOp) + str(userNum2)) + "\n" + "2. " + str(str(userNum2)  + str(userOp) + str(userNum)) + "?")
+            userSum = input()
+            userSum = int(userSum)
+            validInput = 1
 
-            else:
-                return userNum - 10
+            while validInput == 1:
+                if userSum == 1:
+                    validInput = 1
+                    return str(str(userNum) + str(userOp) + str(userNum2) + " = " + str(userNum - userNum2))
+                elif userSum == 2:
+                    validInput = 1
+                    return str(str(userNum2) + str(userOp) + str(userNum) + " = " + str(userNum2 - userNum))
+                else:
+                    validInput = 0
+                    return "Invalid input. Try again"
 
     goAgain = "Yes"
     while goAgain == "Yes":
-        userOp = raw_input("Which operation to do to 10?\n")
-        userIn = raw_input("Which number do you want to " + str(userOp) + " 10?\n")
-        userNum = int(userIn)
-        print("10 " + str(userOp) + " " + str(userNum) + " = " + str(operateTo10(userOp, userNum)))
+        userOp = raw_input("Which operation to do to\n")
+        userNum = input("Which numbers do you want to " + str(userOp) + "\nNum 1: ")
+        userNum = int(userNum)
+        userNum2 = input("Num 2: ")
+        userNum2 = int(userNum2)
+        print(str(operateWith(userOp, userNum, userNum2)))
         goAgain = raw_input("Do you want to do the from 10 game?\n")
 
     print("Goodbye. The program has now ended. Have a good day")
