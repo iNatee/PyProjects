@@ -10,17 +10,18 @@ class UserInput:
             print("Would you like to do?" + "\n" + "1. " + str(str(userNum) + str(userOp) + str(userNum2)) + "\n" + "2. " + str(str(userNum2)  + str(userOp) + str(userNum)) + "?")
             userSum = input()
             userSum = int(userSum)
-            validInput = 1
+            validIn = 1
 
-            while validInput == 1:
+            while validIn == 1:
+
+                validIn = 1
+
                 if userSum == 1:
-                    validInput = 1
                     return str(str(userNum) + str(userOp) + str(userNum2) + " = " + str(userNum - userNum2))
                 elif userSum == 2:
-                    validInput = 1
                     return str(str(userNum2) + str(userOp) + str(userNum) + " = " + str(userNum2 - userNum))
                 else:
-                    validInput = 0
+                    validIn = 0
                     return "Invalid input. Try again"
 
     goAgain = "Yes"
