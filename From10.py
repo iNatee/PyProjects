@@ -21,4 +21,4 @@ class UserInput:
         print("10 " + str(userOp) + " " + str(userNum) + " = " + str(operateTo10(userOp, userNum)))
         goAgain = raw_input("Do you want to do the from 10 game?\n")
 
-    print("Goodbye :)")
+    print("Goodbye and have a good day :)")
