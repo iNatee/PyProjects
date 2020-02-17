@@ -22,7 +22,7 @@ class UserInput:
                     return str(str(userNum2) + str(userOp) + str(userNum) + " = " + str(userNum2 - userNum))
                 else:
                     validIn = 0
-                    return "Invalid input"
+                    return "Invalid input. Try again"
 
     goAgain = "Yes"
     while goAgain == "Yes":
