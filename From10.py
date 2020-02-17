@@ -26,12 +26,12 @@ class UserInput:
 
     goAgain = "Yes"
     while goAgain == "Yes":
-        userOp = raw_input("Which operation to do to\n")
+        userOp = input("Which operation do you want to do?\n")
         userNum = input("Which numbers do you want to " + str(userOp) + "\nNum 1: ")
         userNum = int(userNum)
         userNum2 = input("Num 2: ")
         userNum2 = int(userNum2)
-        print(str(doMinusOrPlus(userOp, userNum, userNum2)))
-        goAgain = raw_input("Do you want to do the from 10 game?\n")
+        print(str(doSum(userOp, userNum, userNum2)))
+        goAgain = input("Go again?\n")
 
     print("Goodbye. The program has now ended. Have a good day")
