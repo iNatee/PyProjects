@@ -9,7 +9,7 @@ class arrays:
     for y in cars:
         print(y)
 
-    cars.pop(0)
+    cars.pop(1)
     
     for y in cars:
         print(y)
